@@ -1,0 +1,214 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* end reset*/
+body {
+  background:#fff url("/images/bg-noise.png");
+  color:#667777;
+  font: 1.2em/1.5em 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  margin:0;
+  padding:0;
+}
+h1, h2, h3, h4, h5, h6 { color: #8C9398; }
+h1 {
+  font: normal 3.5em/.9em 'Chaparral Pro', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  margin-top: 0;
+  margin-bottom: .5em;
+  padding-top: .2em;
+}
+h2 {
+  text-align:center;
+  font: normal 1.5em 'Chaparral Pro', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+}
+h3 {
+  text-align:center;
+  color:#4b616a;
+  font-size:1em;
+  font-weight:bold;
+}
+h4 {
+  font-size:1em;
+  font-weight: bold;
+  margin: 1.5em 0 .5em 0;
+}
+p {
+  clear:both;
+  display: block;
+  margin:0 0 1em 0;
+}
+/* HEADER */
+header {
+  background-color:#171717;
+  font-family:"Helvetica Neue",Helvetica,sans-serif;
+  height:79px;
+}
+nav {
+  margin:0 auto;
+  width:1170px;
+}
+nav img.site-logo { float:left; }
+ul#nav-list li {
+  display:inline-block;
+  padding:1.1em 2em;
+  border-right:1px solid #aaa;
+}
+ul#nav-list li a { color:#a4abac; }
+ul#nav-list li a:hover { color:#aaa; }
+/* CONTENT */
+div.content {
+  padding:1em 0;
+  width:1170px;
+  margin:0 auto;
+}
+div.photo-top { clear:both; }
+div.meta-info {
+  margin-bottom:1em;
+  float:left;
+  text-align:center;
+}
+div.day-nav { width:15%; }
+div.nav-prev { float:left; }
+div.nav-next {
+  float:right;
+  text-align:right;
+}
+div.single-photo {
+  clear:both;
+  background:#fdfdfd;
+  padding:10px 10px 2px 10px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  box-shadow:2px 2px 2px #ddd;
+  margin-bottom:1em;
+}
+div.single-photo img {
+  max-width:1146px;
+  border:1px solid #ddd;
+  padding:0px;
+  margin:0px;
+}
+span.arrow {
+  font-size:4em;
+  vertical-align:bottom;
+}
+
+/* FOOTER */
+footer { font-family:"Helvetica Neue",Helvetica,sans-serif; }
+footer {
+  background-color:#272727;
+  border-bottom:10px solid #171717;
+}
+footer p {
+  padding:1em;
+  color:#a4abac;
+  font-size:.6em;
+  font-style:normal;
+  text-align: center;
+  margin:0;
+}
+/* Style & Emphasis */
+strong, b {
+  color:#546264;
+  font-weight:bold
+}
+em { font-style:italic; }
+.mute {
+  color: rgba(255,255,255,.5);
+  text-shadow: 0px -1px 0px rgba(0,0,0,.5);
+}
+
+/* Link style */
+a, a:visited {
+  color:#b47;
+  text-decoration: none;
+  padding-bottom: .1em;
+}
+
+a:hover {
+  color:#d16;
+  border-color:#d9a;
+}
+
+/* Media Queries, to iron out a few wrinkles */
+/* Smartphones + Small screens (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px), (max-width: 580px) {
+
+  body {
+    padding:3em 15px 0 30px;
+    font-size:1em;
+    line-height: 1.4em;
+  }
+
+  h1 {
+    padding-top:1.2em;
+    margin-bottom: .3em;
+  }
+
+  footer p {
+    padding: 2em 0;
+    font-size: .8em;
+  }
+
+  .snippet img {
+    width:100%
+  }
+  
+  ul, ol {
+    margin:1.5em .5em 1.5em .5em
+  }
+
+}
+
+/* Larger desktops */
+@media only screen and (min-width : 1200px) {
+
+  body {
+    font-size: 1.3em;
+    line-height: 1.5em;
+   }
+
+   h1 {
+     font-size: 4.2em;
+     line-height: 1em;
+   }
+}
+
+
+
+/* eof */

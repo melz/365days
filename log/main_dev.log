@@ -1,0 +1,42 @@
+Dec 30 04:25:18 symfony [info] {sfPatternRouting} Match route "view_by_day" (/day/:num) for /day/1 with parameters array (  'module' => 'home',  'action' => 'viewByDay',  'num' => '1',)
+Dec 30 04:25:18 symfony [info] {myUser} Automatic user logout due to timeout
+Dec 30 04:25:18 symfony [info] {myUser} User is not authenticated
+Dec 30 04:25:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 30 04:25:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 30 04:25:18 symfony [info] {homeActions} Call "homeActions->executeViewByDay()"
+Dec 30 04:25:18 symfony [info] {sfPHPView} Render "E:\www\365days.me\apps\main\modules/home/templates/viewByDaySuccess.php"
+Dec 30 04:25:18 symfony [info] {sfPHPView} Decorate content with "E:\www\365days.me\apps\main\templates/layout.php"
+Dec 30 04:25:18 symfony [info] {sfPHPView} Render "E:\www\365days.me\apps\main\templates/layout.php"
+Dec 30 04:25:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 30 04:25:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 30 04:25:18 symfony [info] {sfWebDebugLogger} Configuration 83.65 ms (8)
+Dec 30 04:25:18 symfony [info] {sfWebDebugLogger} Factories 90.68 ms (1)
+Dec 30 04:25:18 symfony [info] {sfWebDebugLogger} Action "home/viewByDay" 0.74 ms (1)
+Dec 30 04:25:18 symfony [info] {sfWebDebugLogger} View "Success" for "home/viewByDay" 16.51 ms (1)
+Dec 30 04:25:18 symfony [info] {sfWebResponse} Send content (30877 o)
+Dec 30 04:25:20 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Dec 30 04:25:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 30 04:25:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 30 04:25:20 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Dec 30 04:25:20 symfony [info] {sfFrontWebController} Redirect to "http://cclr/main_dev.php/day/1"
+Dec 30 04:25:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Dec 30 04:25:20 symfony [info] {sfWebResponse} Send header "Location: http://cclr/main_dev.php/day/1"
+Dec 30 04:25:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 30 04:25:20 symfony [info] {sfWebDebugLogger} Configuration 4.91 ms (7)
+Dec 30 04:25:20 symfony [info] {sfWebDebugLogger} Factories 35.62 ms (1)
+Dec 30 04:25:20 symfony [info] {sfWebDebugLogger} Action "home/index" 0.45 ms (1)
+Dec 30 04:25:20 symfony [info] {sfWebResponse} Send content (101 o)
+Dec 30 04:25:20 symfony [info] {sfPatternRouting} Match route "view_by_day" (/day/:num) for /day/1 with parameters array (  'module' => 'home',  'action' => 'viewByDay',  'num' => '1',)
+Dec 30 04:25:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 30 04:25:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 30 04:25:20 symfony [info] {homeActions} Call "homeActions->executeViewByDay()"
+Dec 30 04:25:20 symfony [info] {sfPHPView} Render "E:\www\365days.me\apps\main\modules/home/templates/viewByDaySuccess.php"
+Dec 30 04:25:20 symfony [info] {sfPHPView} Decorate content with "E:\www\365days.me\apps\main\templates/layout.php"
+Dec 30 04:25:20 symfony [info] {sfPHPView} Render "E:\www\365days.me\apps\main\templates/layout.php"
+Dec 30 04:25:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 30 04:25:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 30 04:25:20 symfony [info] {sfWebDebugLogger} Configuration 4.61 ms (8)
+Dec 30 04:25:20 symfony [info] {sfWebDebugLogger} Factories 34.03 ms (1)
+Dec 30 04:25:20 symfony [info] {sfWebDebugLogger} Action "home/viewByDay" 0.78 ms (1)
+Dec 30 04:25:20 symfony [info] {sfWebDebugLogger} View "Success" for "home/viewByDay" 12.02 ms (1)
+Dec 30 04:25:20 symfony [info] {sfWebResponse} Send content (30201 o)
