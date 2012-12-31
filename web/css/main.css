@@ -92,12 +92,13 @@ ul#nav-list li a { color:#a4abac; }
 ul#nav-list li a:hover { color:#aaa; }
 /* CONTENT */
 div.content {
+  clear:both;
   padding:1em 0;
   width:1170px;
   margin:0 auto;
 }
-div.photo-top { clear:both; }
 div.meta-info {
+  width:70%;
   margin-bottom:1em;
   float:left;
   text-align:center;
@@ -122,6 +123,11 @@ div.single-photo img {
   border:1px solid #ddd;
   padding:0px;
   margin:0px;
+}
+div#photo-extra {
+  line-height:1em;
+  font-size:0.6em;
+  text-align:right;
 }
 span.arrow {
   font-size:4em;

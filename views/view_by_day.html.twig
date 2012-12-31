@@ -1,0 +1,33 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+<div class="photo-top">
+  <div class="day-nav nav-prev">
+    {% if has_prev %}
+    <span class="arrow"><a href="{{ app.url_generator.generate('view_by_day', {"num": (num - 1)}) }}">&laquo;</a></span>
+    {% endif %}
+    &nbsp;
+  </div>
+  <div class="meta-info">
+    <h2>Day #{{ num }}</h2>
+    <h3 class="entry-title">{{ meta_data['entry_title'] }}</h3>
+  </div>
+  <div class="day-nav nav-next">
+    &nbsp;
+    {% if has_next %}
+    <span class="arrow"><a href="{{ app.url_generator.generate('view_by_day', {"num": (num + 1)}) }}">&raquo;</a></span>
+    {% endif %}
+  </div>
+</div>
+<div class="single-photo">
+  <img src="/assets/{{ padded_num }}.jpg" alt="{{ meta_data['entry_title'] }}" title="{{ meta_data['entry_title'] }}"/>
+</div>
+<div id="photo-extra">
+  <p>
+    {{ meta_data["image_exif"]["ExposureTime"] }} sec @
+    {{ meta_data["image_exif"]["COMPUTED"]["ApertureFNumber"] }} &middot;
+    {{ meta_data["image_exif"]["FocalLength"] * 1 }} mm &middot;
+    {{ meta_data["image_exif"]["UndefinedTag:0xA434"] }}
+  </p>
+</div>
+{% endblock %}

@@ -1,8 +1,0 @@
-homepage:
-  url:   /
-  param: { module: home, action: index }
-
-view_by_day:
-  url:  /day/:num
-  param: { module: home, action: viewByDay }
-  requirements: { num: \d+ }
