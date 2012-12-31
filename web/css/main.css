@@ -102,7 +102,7 @@ div.meta-info {
   float:left;
   text-align:center;
 }
-div.day-nav { width:15%; }
+div.day-nav { width:15%; vertical-align:top; }
 div.nav-prev { float:left; }
 div.nav-next {
   float:right;
@@ -175,23 +175,30 @@ a:hover {
   nav, div.container { width:1170px; }
   div.single-photo img { max-width:1146px; }
 }
+
+@media (min-width: 980px) and (max-width: 1179px) {
+  nav, div.container { width:870px; }
+  div.single-photo img { max-width:846px; }
+}
  
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-  div.container { width:900px; }
-  div.single-photo img { max-width:876px; }
-}
- 
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
   div.container { width:700px; }
   div.single-photo img { max-width:676px; }
 }
  
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  div.container { width:550px; }
+  div.single-photo img { max-width:526px; }
+}
+ 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  div.container { width:400px; }
-  div.single-photo img { max-width:376px; }
+  nav { display:none; }
+  div.container { width:300px; }
+  div.single-photo img { max-width:276px; }
+  footer p { line-height:1.25em; }
 }
 
 /* eof */
