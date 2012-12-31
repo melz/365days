@@ -7,6 +7,8 @@ use Cilex\Provider\Console\Adapter\Silex\ConsoleServiceProvider,
     Symfony\Component\Console\Output\OutputInterface;
 
 require_once __DIR__ . '/vendor/autoload.php';
+define('START_DATE', '2012-12-28');
+
 $app = new Application;
 
 // Console Service Provider and command-line commands
@@ -34,7 +36,7 @@ $app['console']
 
     if ($day == "") {
       // Calculate the number of day for today
-      $start_date = new DateTime("2012-12-29");
+      $start_date = new DateTime(START_DATE);
       $today = new DateTime("now");
       $interval = $today->diff($start_date);
       $day = $interval->format('%a');
