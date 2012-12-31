@@ -1,6 +1,10 @@
 <?php
 use Cilex\Provider\Console\Adapter\Silex\ConsoleServiceProvider,
-    Silex\Application;
+    Silex\Application,
+    Symfony\Component\Console\Input\InputInterface,
+    Symfony\Component\Console\Input\InputArgument,
+    Symfony\Component\Console\Input\InputOption,
+    Symfony\Component\Console\Output\OutputInterface;
 
 require_once __DIR__ . '/vendor/autoload.php';
 $app = new Application;
