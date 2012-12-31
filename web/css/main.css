@@ -80,7 +80,7 @@ header {
 }
 nav {
   margin:0 auto;
-  width:1170px;
+
 }
 nav img.site-logo { float:left; }
 ul#nav-list li {
@@ -91,11 +91,10 @@ ul#nav-list li {
 ul#nav-list li a { color:#a4abac; }
 ul#nav-list li a:hover { color:#aaa; }
 /* CONTENT */
-div.content {
+div.container { margin:0 auto; }
+div#content {
   clear:both;
   padding:1em 0;
-  width:1170px;
-  margin:0 auto;
 }
 div.meta-info {
   width:70%;
@@ -171,50 +170,28 @@ a:hover {
   border-color:#d9a;
 }
 
-/* Media Queries, to iron out a few wrinkles */
-/* Smartphones + Small screens (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px), (max-width: 580px) {
-
-  body {
-    padding:3em 15px 0 30px;
-    font-size:1em;
-    line-height: 1.4em;
-  }
-
-  h1 {
-    padding-top:1.2em;
-    margin-bottom: .3em;
-  }
-
-  footer p {
-    padding: 2em 0;
-    font-size: .8em;
-  }
-
-  .snippet img {
-    width:100%
-  }
-  
-  ul, ol {
-    margin:1.5em .5em 1.5em .5em
-  }
-
+/* Large desktop */
+@media (min-width: 1200px) { 
+  nav, div.container { width:1170px; }
+  div.single-photo img { max-width:1146px; }
 }
-
-/* Larger desktops */
-@media only screen and (min-width : 1200px) {
-
-  body {
-    font-size: 1.3em;
-    line-height: 1.5em;
-   }
-
-   h1 {
-     font-size: 4.2em;
-     line-height: 1em;
-   }
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  div.container { width:900px; }
+  div.single-photo img { max-width:876px; }
 }
-
-
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  div.container { width:700px; }
+  div.single-photo img { max-width:676px; }
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  div.container { width:400px; }
+  div.single-photo img { max-width:376px; }
+}
 
 /* eof */
