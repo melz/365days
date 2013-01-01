@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'League Gothic';
+    src: url('/fonts/leaguegothic-italic-webfont.eot');
+    src: url('/fonts/leaguegothic-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/leaguegothic-italic-webfont.woff') format('woff'),
+         url('/fonts/leaguegothic-italic-webfont.ttf') format('truetype'),
+         url('/fonts/leaguegothic-italic-webfont.svg#league_gothic_italicregular') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -40,26 +50,22 @@ table {
 /* end reset*/
 body {
   background:#fff url("/images/bg-noise.png");
-  color:#667777;
-  font: 1.2em/1.5em 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  color:#677;
+  font: 1.2em/1.5em 'Arial', Helvetica, sans-serif;
   margin:0;
   padding:0;
 }
-h1, h2, h3, h4, h5, h6 { color: #8C9398; }
-h1 {
-  font: normal 3.5em/.9em 'Chaparral Pro', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
-  margin-top: 0;
-  margin-bottom: .5em;
-  padding-top: .2em;
-}
+h1, h2, h3, h4, h5, h6 { color: #4b616a; }
 h2 {
-  text-align:center;
-  font: normal 1.5em 'Chaparral Pro', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  color:#4b616a;
+  margin-bottom:0.5em;
+  text-transform:uppercase;
+  font: normal 2em 'League Gothic','Impact','Arial',sans-serif;
 }
 h3 {
-  text-align:center;
-  color:#4b616a;
-  font-size:1em;
+  color:#8C9398;
+  font-size:1.2em;
+  margin-bottom:0.5em;
   font-weight:bold;
 }
 h4 {
@@ -69,27 +75,37 @@ h4 {
 }
 p {
   clear:both;
-  display: block;
+  display:block;
   margin:0 0 1em 0;
+}
+strong, b {
+  color:#546264;
+  font-weight:bold
+}
+em { font-style:italic; }
+.mute {
+  color: rgba(255,255,255,.5);
+  text-shadow: 0px -1px 0px rgba(0,0,0,.5);
 }
 /* HEADER */
 header {
   background-color:#171717;
-  font-family:"Helvetica Neue",Helvetica,sans-serif;
-  height:79px;
+  font-family:'League Gothic','Impact','Arial',sans-serif;
+  height:60px;
 }
-nav {
-  margin:0 auto;
-
-}
+nav { margin:0 auto; }
 nav img.site-logo { float:left; }
 ul#nav-list li {
   display:inline-block;
-  padding:1.1em 2em;
-  border-right:1px solid #aaa;
+  padding:0.8em 1.2em;
 }
-ul#nav-list li a { color:#a4abac; }
-ul#nav-list li a:hover { color:#aaa; }
+ul#nav-list li a {
+  font-size:1.3em;
+  font-family:'League Gothic','Impact','Arial',sans-serif;
+  text-transform:uppercase;
+  color:#a4abac;
+}
+ul#nav-list li a:hover, ul#nav-list li.active a { color:#fff; }
 /* CONTENT */
 div.container { margin:0 auto; }
 div#content {
@@ -102,7 +118,12 @@ div.meta-info {
   float:left;
   text-align:center;
 }
-div.day-nav { width:15%; vertical-align:top; }
+div.meta-info h2 { margin-bottom:0px; }
+div.meta-info h3 { margin-bottom:0px; }
+div.day-nav {
+  width:15%;
+  vertical-align:top;
+}
 div.nav-prev { float:left; }
 div.nav-next {
   float:right;
@@ -118,7 +139,6 @@ div.single-photo {
   margin-bottom:1em;
 }
 div.single-photo img {
-  max-width:1146px;
   border:1px solid #ddd;
   padding:0px;
   margin:0px;
@@ -128,13 +148,13 @@ div#photo-extra {
   font-size:0.6em;
   text-align:right;
 }
-span.arrow {
-  font-size:4em;
+span.arrow { font-size:4em; }
+span.arrow a {
   vertical-align:bottom;
+  height:86px;
 }
 
 /* FOOTER */
-footer { font-family:"Helvetica Neue",Helvetica,sans-serif; }
 footer {
   background-color:#272727;
   border-bottom:10px solid #171717;
@@ -147,28 +167,14 @@ footer p {
   text-align: center;
   margin:0;
 }
-/* Style & Emphasis */
-strong, b {
-  color:#546264;
-  font-weight:bold
-}
-em { font-style:italic; }
-.mute {
-  color: rgba(255,255,255,.5);
-  text-shadow: 0px -1px 0px rgba(0,0,0,.5);
-}
 
 /* Link style */
 a, a:visited {
-  color:#b47;
+  color:#de0021;
   text-decoration: none;
   padding-bottom: .1em;
 }
-
-a:hover {
-  color:#d16;
-  border-color:#d9a;
-}
+a:hover { color:#de0021; }
 
 /* Large desktop */
 @media (min-width: 1200px) { 
@@ -189,16 +195,29 @@ a:hover {
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+  header { height:40px; }
+  nav { font-size:0.7em; }
+  img.site-logo { height:40px; }
   div.container { width:550px; }
   div.single-photo img { max-width:526px; }
+  div.meta-info h2 { font-size:1.2em; }
+  div.meta-info h3 { font-size:1em; }
+  ul#nav-list li { padding:0.5em 1em; }
+  span.arrow { font-size:3em; }
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  nav { display:none; }
+  header { height:40px; }
+  nav { font-size:0.7em; }
+  img.site-logo { height:40px; }
   div.container { width:300px; }
   div.single-photo img { max-width:276px; }
   footer p { line-height:1.25em; }
+  div.meta-info h2 { font-size:1.2em; }
+  div.meta-info h3 { font-size:1em; }
+  ul#nav-list li { padding:0.5em 1em; }
+  span.arrow { font-size:3em; }
 }
 
 /* eof */
