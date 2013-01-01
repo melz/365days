@@ -7,7 +7,7 @@ use Cilex\Provider\Console\Adapter\Silex\ConsoleServiceProvider,
     Symfony\Component\Console\Output\OutputInterface;
 
 require_once __DIR__ . '/vendor/autoload.php';
-define('START_DATE', '2012-12-31');
+define('START_DATE', '2013-01-01');
 
 $app = new Silex\Application;
 

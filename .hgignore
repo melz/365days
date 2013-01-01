@@ -1,0 +1,6 @@
+syntax: glob
+logs/*.log
+vendor/*
+data/metadata/*
+web/assets/*
+.idea/*

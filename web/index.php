@@ -87,5 +87,5 @@ $app->error(function (\Exception $e, $code) use($app) {
   );
 });
 
-$app['debug'] = true;
+$app['debug'] = false;
 $app->run();
