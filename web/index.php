@@ -5,7 +5,7 @@ use Symfony\Component\HttpFoundation\Response;
 require_once __DIR__.'/../vendor/autoload.php';
 
 /* Fixed Variables */
-define('START_DATE', '2012-12-28');
+define('START_DATE', '2013-01-01');
 
 $app = new Silex\Application();
 
@@ -59,8 +59,8 @@ $app->get('/day/{num}', function(Silex\Application $app, $num) {
   // Determine if there is a Prev/Next
   $prev = $num - 1;
   $next = $num + 1;
-  $has_prev = file_exists(__DIR__.'/../data/metadata/'.str_pad($prev, 3, 0, STR_PAD_LEFT).".json");
-  $has_next = file_exists(__DIR__.'/../data/metadata/'.str_pad($next, 3, 0, STR_PAD_LEFT).".json");
+  $has_prev = is_readable(__DIR__.'/../data/metadata/'.str_pad($prev, 3, 0, STR_PAD_LEFT).".json");
+  $has_next = is_readable(__DIR__.'/../data/metadata/'.str_pad($next, 3, 0, STR_PAD_LEFT).".json");
 
   return $app['twig']->render('view_by_day.html.twig', array(
     'num'        => $num,

@@ -12,7 +12,7 @@
   <body>
     <header id="mast" role="navigation">
       <nav>
-        <a href="{{ app.url_generator.generate('homepage') }}"><img class="site-logo" src="/images/365days_logo.png" /></a>
+        <a href="{{ app.url_generator.generate('homepage') }}"><img class="site-logo" src="/images/365days.png" alt="365days.me" title="365days.me" /></a>
         
         <ul id="nav-list">
           <li class="nav-today{% if app.request.get('_route') == 'view_by_day' %} active{% endif %}"><a href="{{ app.url_generator.generate('homepage') }}">Today</a></li>
