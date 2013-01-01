@@ -12,11 +12,12 @@
   <body>
     <header id="mast" role="navigation">
       <nav>
-        <a href="{{ app.url_generator.generate('homepage') }}"><img class="site-logo" src="/images/365days.png" /></a>
+        <a href="{{ app.url_generator.generate('homepage') }}"><img class="site-logo" src="/images/365days_logo.png" /></a>
+        
         <ul id="nav-list">
-          <li class="nav-today"><a href="{{ app.url_generator.generate('homepage') }}">Today</a></li>
-          <li class="nav-archives"><a href="{{ app.url_generator.generate('archives') }}">Archives</a></li>
-          <li class="nav-about"><a href="{{ app.url_generator.generate('about') }}">About</a></li>
+          <li class="nav-today{% if app.request.get('_route') == 'view_by_day' %} active{% endif %}"><a href="{{ app.url_generator.generate('homepage') }}">Today</a></li>
+          <li class="nav-archives{% if app.request.get('_route') == 'archives' %} active{% endif %}"><a href="{{ app.url_generator.generate('archives') }}">Archives</a></li>
+          <li class="nav-about{% if app.request.get('_route') == 'about' %} active{% endif %}"><a href="{{ app.url_generator.generate('about') }}">About</a></li>
         </ul>
       </nav>
     </header>
@@ -29,7 +30,7 @@
 
     <footer>
       <p class="copyright-notice">
-        All photos &amp; content &copy; <?php echo date('Y') ?> Melissa Peh (<a href="http://twitter.com/melz" rel="external">@melz</a>). Please do not repost my photos without prior consent.
+        All photos &amp; content &copy; {{ "now"|date("Y") }} Melissa Peh (<a href="http://twitter.com/melz" rel="external">@melz</a>). Please do not repost my photos without prior consent.
       </p>
     </footer>
 
