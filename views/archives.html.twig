@@ -2,5 +2,13 @@
 
 {% block content %}
 <h2>Archives</h2>
-<p>Coming soon ... when I feel like coding it.</p>
+
+<div id="entries">
+  {% for entry in recent_photos %}
+  <div class="entry">
+    <h3>{{ entry["title"] }}</h3>
+      <a href="{{ app.url_generator.generate('view_by_day', {"num": entry["day"]}) }}"><img src="/assets/{{ entry["padded_day"] }}s.jpg" alt="{{ entry["title"] }}" title="{{ entry["title"] }}"/></a>
+  </div>
+  {% endfor %}
+</div>
 {% endblock %}

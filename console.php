@@ -68,6 +68,16 @@ $app['console']
       // Save meta information
       file_put_contents($meta_file_path, $meta_data_json);
 
+      // Generate thumbnail for archives page
+      $imagine = new Imagine\Gd\Imagine();
+      $size = new Imagine\Image\Box(260, 165);
+      $mode    = Imagine\Image\ImageInterface::THUMBNAIL_INSET;
+
+      $imagine->open($image_file_path)
+        ->thumbnail($size, $mode)
+        ->save(__DIR__.'/web/assets/'.str_pad($day, 3, 0, STR_PAD_LEFT)."s.jpg")
+      ;
+
       // Update last added num
       $last_added = trim(file_get_contents(__DIR__.'/data/last_added'));
       if ($day > $last_added) {

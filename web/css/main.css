@@ -153,7 +153,18 @@ span.arrow a {
   vertical-align:bottom;
   height:86px;
 }
-
+/* CONTENT: Archives */
+div.entry {
+  background-color:#ffffff;
+  display:inline-block;
+  border:1px solid #ddd;
+  padding:10px 10px 0px 10px;
+  margin-bottom:10px;
+}
+div.entry h3 {
+  font-size:0.8em;
+  font-weight:normal;
+}
 /* FOOTER */
 footer {
   background-color:#272727;

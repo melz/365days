@@ -42,7 +42,25 @@ $app->get('/about', function() use($app) {
 
 /* Archives */
 $app->get('/archives', function() use($app) {
-  return $app['twig']->render('archives.html.twig');
+  $files = scandir(__DIR__.'/../data/metadata/', 1);
+  $recent_photos = array();
+
+  foreach($files as $f)
+  {
+    $md_file = __DIR__.'/../data/metadata/'.$f;
+    if (is_readable($md_file) && $f != "." && $f != ".." && $f != "empty")
+    {
+      $data = file_get_contents($md_file);
+      $meta_data = json_decode($data, true);
+      $fname = explode(".", $f);
+      $recent_photos[] = array(
+        'day'        => intval($fname[0]),
+        'padded_day' => $fname[0],
+        'title'      => $meta_data["entry_title"],
+      );
+    }
+  }
+  return $app['twig']->render('archives.html.twig', array("recent_photos" => $recent_photos));
 })
 ->bind('archives');
 
