@@ -70,10 +70,13 @@ $app['console']
 
       // Generate thumbnail for archives page
       $imagine = new Imagine\Gd\Imagine();
-      $size = new Imagine\Image\Box(260, 165);
-      $mode    = Imagine\Image\ImageInterface::THUMBNAIL_INSET;
+      //$size = new Imagine\Image\Box(260, 165);
+      $mode = Imagine\Image\ImageInterface::THUMBNAIL_INSET;
 
-      $imagine->open($image_file_path)
+      $photo = $imagine->open($image_file_path);
+      $size = $photo->getSize()->scale(0.22);
+
+      $photo
         ->thumbnail($size, $mode)
         ->save(__DIR__.'/web/assets/'.str_pad($day, 3, 0, STR_PAD_LEFT)."s.jpg")
       ;
