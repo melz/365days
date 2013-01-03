@@ -74,7 +74,7 @@ $app['console']
       $mode = Imagine\Image\ImageInterface::THUMBNAIL_INSET;
 
       $photo = $imagine->open($image_file_path);
-      $size = $photo->getSize()->scale(0.22);
+      $size = $photo->getSize()->scale(0.21);
 
       $photo
         ->thumbnail($size, $mode)

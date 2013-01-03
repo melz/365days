@@ -1,5 +1,14 @@
 {% extends "layout.html.twig" %}
 
+{% block js %}
+<script src="/js/masonry.min.js"></script>
+<script>
+window.onload = function() {
+  var wall = new Masonry( document.getElementById('entries') );
+};
+</script>
+{% endblock %}
+
 {% block content %}
 <h2>Archives</h2>
 
@@ -14,3 +23,4 @@
   {% endfor %}
 </div>
 {% endblock %}
+
