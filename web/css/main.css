@@ -165,22 +165,13 @@ div#photo-blurb {
   font-family:Cambria, Georgia, "Times New Roman", serif;
   background-color:#fff;
   padding:40px 40px;
-  -webkit-column-count: 2;
-  -webkit-column-gap: 80px; 
-  -webkit-column-rule: 1px dashed black;
-  -moz-column-count: 2;
-  -moz-column-gap: 80px;  
-  -moz-column-rule: 1px dashed black;
-  column-count: 2;
-  column-gap: 80px; 
-  column-rule: 1px dashed black;
   border-radius:10px;
   box-shadow:2px 2px 2px #ddd;
 }
 div#photo-blurb h1 {
   font-size:2em;
   color:#de0021;
-  margin-bottom:20px;
+  margin-bottom:1em;
 }
 p.blurb-date {
   color:#cccccc;
@@ -243,11 +234,33 @@ a:hover { color:#de0021; }
 @media (min-width: 1200px) { 
   nav, div.container { width:1170px; }
   div.single-photo img { max-width:1146px; }
+  div#photo-blurb {
+    -webkit-column-count:2;
+    -webkit-column-gap:80px; 
+    -webkit-column-rule:1px dashed black;
+    -moz-column-count:2;
+    -moz-column-gap:80px;  
+    -moz-column-rule:1px dashed black;
+    column-count:2;
+    column-gap:80px; 
+    column-rule:1px dashed black;
+  }
 }
 
 @media (min-width: 980px) and (max-width: 1179px) {
   nav, div.container { width:870px; }
   div.single-photo img { max-width:846px; }
+  div#photo-blurb {
+    -webkit-column-count:2;
+    -webkit-column-gap:80px; 
+    -webkit-column-rule:1px dashed black;
+    -moz-column-count:2;
+    -moz-column-gap:80px;  
+    -moz-column-rule:1px dashed black;
+    column-count:2;
+    column-gap:80px; 
+    column-rule:1px dashed black;
+  }
 }
  
 /* Portrait tablet to landscape and desktop */
