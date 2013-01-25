@@ -163,19 +163,21 @@ div#photo-extra {
 }
 div#photo-blurb {
   font-family:Cambria, Georgia, "Times New Roman", serif;
+  font-size:1em;
   background-color:#fff;
   padding:40px 40px;
   border-radius:10px;
   box-shadow:2px 2px 2px #ddd;
 }
 div#photo-blurb h1 {
-  font-size:2em;
+  font-size:1.6em;
   color:#de0021;
   margin-bottom:1em;
 }
 p.blurb-date {
   color:#cccccc;
-  margin-top:40px;
+  margin-top:1em;
+  margin-bottom:0;
   font-size:0.8em;
 }
 
