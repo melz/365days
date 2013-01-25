@@ -67,12 +67,23 @@ $app->get('/day/{num}', function(Silex\Application $app, $num) {
   $has_prev = is_readable(__DIR__.'/../data/metadata/'.str_pad($prev, 3, 0, STR_PAD_LEFT).".json");
   $has_next = is_readable(__DIR__.'/../data/metadata/'.str_pad($next, 3, 0, STR_PAD_LEFT).".json");
 
+  // Grab blurb for this day
+  $has_blurb = false;
+  $blurb = "";
+  if (is_readable(__DIR__.'/../data/blurb/'.str_pad($num, 3, 0, STR_PAD_LEFT).".md"))
+  {
+    $has_blurb = true;
+    $blurb = file_get_contents(__DIR__.'/../data/blurb/'.str_pad($num, 3, 0, STR_PAD_LEFT).".md");
+  }
+
   return $app['twig']->render('view_by_day.html.twig', array(
     'num'        => $num,
     'padded_num' => str_pad($num, 3, 0, STR_PAD_LEFT),
     'meta_data'  => $meta_data,
     'has_prev'   => $has_prev,
-    'has_next'   => $has_next
+    'has_next'   => $has_next,
+    'has_blurb'  => $has_blurb,
+    'blurb'      => $blurb
   ));
 })
 ->assert('num', '\d+')

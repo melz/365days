@@ -30,4 +30,10 @@
     {{ meta_data["image_exif"]["UndefinedTag:0xA434"] }}
   </p>
 </div>
+{% if has_blurb %}
+<div id="photo-blurb">
+  {{ blurb|markdown }}
+  <p class="blurb-date">{{ meta_data["entry_date"] }}</p>
+</div>
+{% endif %}
 {% endblock %}
