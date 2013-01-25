@@ -47,7 +47,7 @@ $app['console']
     }
 
     // Now calculate the date for this day based on the calculated $day
-    $date = date('Y-m-d', strtotime('+'.$day.' days', strtotime(START_DATE)));
+    $date = date('Y-m-d', strtotime('+'.$day-1.' days', strtotime(START_DATE)));
 
     // Path to meta data file
     $meta_file_path = __DIR__.'/data/metadata/'.str_pad($day, 3, 0, STR_PAD_LEFT).".json";
