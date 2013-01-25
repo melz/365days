@@ -1,6 +1,8 @@
 <?php
-ini_set('display_errors', 0);
 require_once __DIR__.'/../vendor/autoload.php';
+
+ini_set('display_errors', 1);
+error_reporting(-1);
 
 /* Fixed Variables */
 define('START_DATE', '2013-01-01');
