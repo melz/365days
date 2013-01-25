@@ -48,20 +48,20 @@ table {
   border-spacing: 0;
 }
 /* end reset*/
+html, body { height:100%; }
 body {
   background:#fff url("/images/bg.gif");
-  color:#677;
-  font: 1.2em/1.5em 'Arial', Helvetica, sans-serif;
+  color:#667777;
+  font:1.2em/1.5em 'Arial', Helvetica, sans-serif;
   margin:0;
   padding:0;
-  height:100%;
 }
 h1, h2, h3, h4, h5, h6 { color: #4b616a; }
 h2 {
   color:#4b616a;
   margin-bottom:0.5em;
   text-transform:uppercase;
-  font: normal 2em 'League Gothic','Impact','Arial',sans-serif;
+  font:normal 2em 'League Gothic','Impact','Arial',sans-serif;
 }
 h3 {
   color:#8C9398;
@@ -72,7 +72,7 @@ h3 {
 h4 {
   font-size:1em;
   font-weight: bold;
-  margin: 1.5em 0 .5em 0;
+  margin:1.5em 0 .5em 0;
 }
 p {
   clear:both;
@@ -87,6 +87,11 @@ em { font-style:italic; }
 .mute {
   color: rgba(255,255,255,.5);
   text-shadow: 0px -1px 0px rgba(0,0,0,.5);
+}
+/* WRAPPER */
+div#wrapper {
+  position:relative;
+  min-height:100%;
 }
 /* HEADER */
 header {
@@ -106,6 +111,7 @@ ul#nav-list li {
   padding:0.8em 1.2em;
 }
 ul#nav-list li a {
+  font-weight:normal;
   font-size:1.3em;
   font-family:'League Gothic','Impact','Arial',sans-serif;
   text-transform:uppercase;
@@ -117,6 +123,7 @@ div.container { margin:0 auto; }
 div#content {
   clear:both;
   padding:1em 0;
+  padding-bottom:80px;
 }
 div.meta-info {
   width:70%;
@@ -161,7 +168,6 @@ span.arrow a {
 }
 /* CONTENT: Archives */
 div#entries { clear: both; }
-
 div.entry {
   background-color:#ffffff;
   float:left;
