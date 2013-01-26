@@ -247,7 +247,7 @@ a:hover { color:#de0021; }
     column-gap:80px; 
     column-rule:1px dashed black;
   }
-  div.container.is-vertical {
+  div.is-vertical {
     margin:0 auto 1em;
 	width:824px;
   }
