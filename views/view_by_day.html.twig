@@ -19,7 +19,7 @@
     {% endif %}
   </div>
 </div>
-<div class="single-photo">
+<div class="single-photo{%if meta_data["image_exif"]["COMPUTED"]["height"] = 1200 %} is-vertical{% endif %}">
   <img src="/assets/{{ padded_num }}.jpg" alt="{{ meta_data['entry_title'] }}" title="{{ meta_data['entry_title'] }}"/>
 </div>
 <div id="photo-extra">

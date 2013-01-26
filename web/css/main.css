@@ -247,6 +247,7 @@ a:hover { color:#de0021; }
     column-gap:80px; 
     column-rule:1px dashed black;
   }
+  div.single-photo.is-vertical { width:842px; }
 }
 
 @media (min-width: 980px) and (max-width: 1179px) {

@@ -47,7 +47,7 @@ $app['console']
     }
 
     // Now calculate the date for this day based on the calculated $day
-    $date = date('Y-m-d', strtotime('+'.$day-1.' days', strtotime(START_DATE)));
+    $date = date('Y-m-d', strtotime('+'.($day-1).' days', strtotime(START_DATE)));
 
     // Path to meta data file
     $meta_file_path = __DIR__.'/data/metadata/'.str_pad($day, 3, 0, STR_PAD_LEFT).".json";
@@ -70,12 +70,9 @@ $app['console']
 
       // Generate thumbnail for archives page
       $imagine = new Imagine\Gd\Imagine();
-      //$size = new Imagine\Image\Box(260, 165);
       $mode = Imagine\Image\ImageInterface::THUMBNAIL_INSET;
-
       $photo = $imagine->open($image_file_path);
       $size = $photo->getSize()->scale(0.21);
-
       $photo
         ->thumbnail($size, $mode)
         ->save(__DIR__.'/web/assets/'.str_pad($day, 3, 0, STR_PAD_LEFT)."s.jpg")
