@@ -247,9 +247,9 @@ a:hover { color:#de0021; }
     column-gap:80px; 
     column-rule:1px dashed black;
   }
-  div.single-photo.is-vertical {
+  div.container.is-vertical {
     margin:0 auto 1em;
-	width:822px;
+	width:824px;
   }
 }
 
