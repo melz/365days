@@ -249,7 +249,7 @@ a:hover { color:#de0021; }
   }
   div.is-vertical {
     margin:0 auto 1em;
-	width:824px;
+    width:824px;
   }
 }
 
@@ -266,6 +266,10 @@ a:hover { color:#de0021; }
     column-count:2;
     column-gap:80px; 
     column-rule:1px dashed black;
+  }
+  div.is-vertical {
+    margin:0 auto 1em;
+    width:824px;
   }
 }
  
