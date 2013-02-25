@@ -1,7 +1,7 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
-<div id="photo-container"{%if meta_data["image_exif"]["COMPUTED"]["height"] = 1200 %} class="is-vertical"{% endif %}>
+<div id="photo-container"{%if meta_data.image_exif.COMPUTED.height == 1200 %} class="is-vertical"{% endif %}>
   <div class="photo-top">
     <div class="day-nav nav-prev">
       {% if has_prev %}
@@ -11,7 +11,7 @@
     </div>
     <div class="meta-info">
       <h2>Day #{{ num }}</h2>
-      <h3 class="entry-title">{{ meta_data['entry_title'] }}</h3>
+      <h3 class="entry-title">{{ meta_data.entry_title }}</h3>
     </div>
     <div class="day-nav nav-next">
       &nbsp;
@@ -21,7 +21,7 @@
     </div>
   </div>
   <div class="single-photo">
-    <img src="/assets/{{ padded_num }}.jpg" alt="{{ meta_data['entry_title'] }}" title="{{ meta_data['entry_title'] }}"/>
+    <img src="/assets/{{ padded_num }}.jpg" alt="{{ meta_data.entry_title }}" title="{{ meta_data.entry_title }}"/>
   </div>
   <div id="photo-extra">
     <p>
@@ -34,7 +34,7 @@
   {% if has_blurb %}
   <div id="photo-blurb">
     {{ blurb|markdown }}
-    <p class="blurb-date">{{ meta_data["entry_date"] }}</p>
+    <p class="blurb-date">{{ meta_data.entry_date }}</p>
   </div>
   {% endif %}
 </div>
