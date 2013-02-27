@@ -30,8 +30,8 @@
       {{ meta_data.image_exif.ExposureTime }} sec @
       {{ meta_data.image_exif.COMPUTED.ApertureFNumber }} &middot;
       {{ meta_data.image_exif.FocalLength * 1 }} mm &middot;
-      {% if meta_data.image_exif.["UndefinedTag:0xA434"] is defined %}
-        {{ meta_data.image_exif.["UndefinedTag:0xA434"] }}
+      {% if meta_data["image_exif"]["UndefinedTag:0xA434"] is defined %}
+        {{ meta_data["image_exif"]["UndefinedTag:0xA434"] }}
       {% else %}
         {{ meta_data.image_exif.Make }} {{ meta_data.image_exif.Model }}
       {% endif %}
