@@ -1,5 +1,7 @@
 {% extends "layout.html.twig" %}
 
+{% block title "Day #{num}: #{meta_data.entry_title} - " %}
+
 {% block content %}
 <div id="photo-container"{%if meta_data.image_exif.COMPUTED.height == 1200 %} class="is-vertical"{% endif %}>
   <div class="photo-top">
@@ -25,10 +27,10 @@
   </div>
   <div id="photo-extra">
     <p>
-      {{ meta_data["image_exif"]["ExposureTime"] }} sec @
-      {{ meta_data["image_exif"]["COMPUTED"]["ApertureFNumber"] }} &middot;
-      {{ meta_data["image_exif"]["FocalLength"] * 1 }} mm &middot;
-      {{ meta_data["image_exif"]["UndefinedTag:0xA434"] }}
+      {{ meta_data.image_exif.ExposureTime }} sec @
+      {{ meta_data.image_exif.COMPUTED.ApertureFNumber }} &middot;
+      {{ meta_data.image_exif.FocalLength * 1 }} mm &middot;
+      {{ meta_data.image_exif.UndefinedTag:0xA434 }}
     </p>
   </div>
   {% if has_blurb %}
