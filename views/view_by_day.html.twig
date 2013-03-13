@@ -30,6 +30,9 @@
       {{ meta_data.image_exif.ExposureTime }} sec @
       {{ meta_data.image_exif.COMPUTED.ApertureFNumber }} &middot;
       {{ meta_data.image_exif.FocalLength * 1 }} mm &middot;
+      
+      {# Show information about the camera lens used (Lightroom / Canon make only), i.e. proprietary make only #}
+      {# If not found, then show the camera make #}
       {% if meta_data["image_exif"]["UndefinedTag:0xA434"] is defined %}
         {{ meta_data["image_exif"]["UndefinedTag:0xA434"] }}
       {% else %}
