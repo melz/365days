@@ -1,15 +1,5 @@
 {% extends "layout.html.twig" %}
 
-{% block js %}
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="/js/jGravity.min.js"></script>
-<script>
-$(document).ready(function() {
-  $('body').jGravity();
-});
-</script>
-{% endblock %}
-
 {% block title "Day #{num}: #{meta_data.entry_title} - " %}
 
 {% block content %}
